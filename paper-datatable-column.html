@@ -287,6 +287,8 @@ This element is used inside of `<paper-datatable>` to declare the columns to be 
 
 				_createCellInstance: function(model, notificationKey){
 					var modelDefined = model[this.property];
+					console.log(this.property);
+					console.log(modelDefined);
 					if (!modelDefined && this.property) {
 						this.property.split('.').forEach(key => modelDefined = modelDefined ? modelDefined[key] : model[key]);
 					}
